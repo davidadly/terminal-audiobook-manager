@@ -1,21 +1,24 @@
-# pylint: disable=missing-module-docstring
 import os
+import sys
 from audiobookmanager import AudioBookManager
 
 class AudioBookApp:
     def __init__(self):
         self.script_path = os.path.dirname(os.path.abspath(__file__))
         self.config_file = os.path.join(self.script_path, "config.txt")
+        self.audiobook_path = os.path.join(self.script_path, "audio books")
+        os.makedirs(self.audiobook_path, exist_ok=True)
         self.load_config()
 
     def load_config(self):
         if os.path.exists(self.config_file):
             with open(self.config_file, "r") as file:
-                self.audiobook_path = file.read().strip()
-        else:
-            self.audiobook_path = os.path.join(self.script_path, "audio books")
-            os.makedirs(self.audiobook_path, exist_ok=True)
-            self.save_config()
+                config_path = file.read().strip()
+                if os.path.exists(config_path):
+                    self.audiobook_path = config_path
+                else:
+                    print(f"Configured path '{config_path}' does not exist. Using default path.")
+        self.save_config()
 
     def save_config(self):
         with open(self.config_file, "w") as file:
@@ -29,9 +32,12 @@ class AudioBookApp:
 
     def set_audiobook_path(self):
         path = input("Enter the new path for audio books: ")
-        self.audiobook_path = path
-        self.save_config()
-        print("Audio book path updated successfully.")
+        if os.path.exists(path):
+            self.audiobook_path = path
+            self.save_config()
+            print("Audio book path updated successfully.")
+        else:
+            print("Invalid path. Path does not exist.")
 
     def run(self):
         self.manager = AudioBookManager(self.audiobook_path)
@@ -66,5 +72,9 @@ class AudioBookApp:
                     print("Invalid choice. Please try again.")
 
             except KeyboardInterrupt:
-                print("\nReturning to main menu...")
-                continue
+                print("\033[91m\nAre you sure you want to exit? Press Ctrl+C again to exit or Enter to go back.\033[0m")
+                try:
+                    input()
+                except KeyboardInterrupt:
+                    print("\nExiting the application...")
+                    sys.exit(0)
