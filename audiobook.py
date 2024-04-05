@@ -38,6 +38,7 @@ class AudioBook:
         play_bar = f"{filled_bar}{empty_bar}"
 
         sys.stdout.write(f"\r[{play_bar}] {current_time:.2f}/{duration:.2f}")
+        sys.stdout.write("\n\033[92mGo forward 5 seconds with 'f', go backward 5 seconds with 'b', or quit with 'q'\033[0m")
         sys.stdout.flush()
 
     def get_keypress(self):
