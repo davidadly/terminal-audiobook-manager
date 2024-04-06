@@ -58,7 +58,7 @@ class AudioBook:
         except subprocess.CalledProcessError:
             return None
 
-    def display_play_bar(self, current_time, duration):
+    def display_play_bar(self, current_time, duration, show_instructions=False):
         bar_width = 50
         filled_width = int(bar_width * current_time / duration)
         empty_width = bar_width - filled_width
@@ -67,10 +67,11 @@ class AudioBook:
         empty_bar = "░" * empty_width
         play_bar = f"{filled_bar}{empty_bar}"
 
-        sys.stdout.write(f"[{play_bar}] {current_time:.2f}/{duration:.2f}\n")
-        sys.stdout.write(
-            "\033[92mGo forward 5 seconds with 'f', go backward 5 seconds with 'b', or quit with 'q'\033[0m\n"
-        )
+        sys.stdout.write(f"\r[{play_bar}] {current_time:.2f}/{duration:.2f}")
+        if show_instructions:
+            sys.stdout.write(
+                "\n\033[92mGo forward 5 seconds with 'f', go backward 5 seconds with 'b', or quit with 'q'\033[0m"
+            )
         sys.stdout.flush()
 
     def get_keypress(self):
@@ -108,8 +109,10 @@ class AudioBook:
                 stderr=subprocess.DEVNULL,
             )
 
+        show_instructions = True
         while process.poll() is None:
-            self.display_play_bar(current_time, duration)
+            self.display_play_bar(current_time, duration, show_instructions)
+            show_instructions = False
             key = self.get_keypress()
             if key == "q":
                 process.terminate()
