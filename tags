@@ -4,56 +4,56 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-AudioBook	.\audiobook.py	/^class AudioBook:$/;"	c
-AudioBook	.\audiobook_manager.py	/^from audiobook import AudioBook$/;"	i
-AudioBook	.\audiobookmanager.py	/^from audiobook import AudioBook$/;"	i
-AudioBookApp	.\audiobookapp.py	/^class AudioBookApp:$/;"	c
-AudioBookApp	.\main.py	/^from audiobookapp import AudioBookApp$/;"	i
-AudioBookManager	.\audiobook_manager.py	/^class AudioBookManager:$/;"	c
-AudioBookManager	.\audiobookapp.py	/^from audiobookmanager import AudioBookManager$/;"	i
-AudioBookManager	.\audiobookmanager.py	/^class AudioBookManager:$/;"	c
-__init__	.\audiobook.py	/^    def __init__(self, title, file_path):$/;"	m	class:AudioBook
-__init__	.\audiobook_manager.py	/^    def __init__(self, audiobook_folder):$/;"	m	class:AudioBookManager
-__init__	.\audiobookapp.py	/^    def __init__(self):$/;"	m	class:AudioBookApp
-__init__	.\audiobookmanager.py	/^    def __init__(self, audiobook_folder):$/;"	m	class:AudioBookManager
-animate_text	.\startup_animation.py	/^def animate_text(text):$/;"	f
-app	.\main.py	/^    app = AudioBookApp()$/;"	v
-clear_screen	.\startup_animation.py	/^def clear_screen():$/;"	f
-create_log_file	.\audiobookmanager.py	/^    def create_log_file(self):$/;"	m	class:AudioBookManager
-display_play_bar	.\audiobook.py	/^    def display_play_bar(self, current_time, duration):$/;"	m	class:AudioBook
-download_audiobook	.\audiobook_manager.py	/^    def download_audiobook(self, audiobook_path):$/;"	m	class:AudioBookManager
-get_duration	.\audiobook.py	/^    def get_duration(self):$/;"	m	class:AudioBook
-get_keypress	.\audiobook.py	/^    def get_keypress(self):$/;"	m	class:AudioBook
-get_last_played_position	.\audiobookmanager.py	/^    def get_last_played_position(self, audiobook_title):$/;"	m	class:AudioBookManager
-json	.\audiobookmanager.py	/^import json$/;"	i
-list_audiobooks	.\audiobook_manager.py	/^    def list_audiobooks(self):$/;"	m	class:AudioBookManager
-list_audiobooks	.\audiobookmanager.py	/^    def list_audiobooks(self):$/;"	m	class:AudioBookManager
-load_config	.\audiobookapp.py	/^    def load_config(self):$/;"	m	class:AudioBookApp
-msvcrt	.\audiobook.py	/^    import msvcrt$/;"	i
-os	.\audiobook.py	/^import os$/;"	i
-os	.\audiobook_manager.py	/^import os$/;"	i
-os	.\audiobookapp.py	/^import os$/;"	i
-os	.\audiobookmanager.py	/^import os$/;"	i
-os	.\startup_animation.py	/^import os$/;"	i
-play	.\audiobook.py	/^    def play(self, start_time=None):$/;"	m	class:AudioBook
-play_audiobook	.\audiobook_manager.py	/^    def play_audiobook(self):$/;"	m	class:AudioBookManager
-play_audiobook	.\audiobookmanager.py	/^    def play_audiobook(self):$/;"	m	class:AudioBookManager
-play_with_progress	.\audiobook.py	/^    def play_with_progress(self, start_time=None):$/;"	m	class:AudioBook
-run	.\audiobookapp.py	/^    def run(self):$/;"	m	class:AudioBookApp
-save_config	.\audiobookapp.py	/^    def save_config(self):$/;"	m	class:AudioBookApp
-save_last_played_position	.\audiobookmanager.py	/^    def save_last_played_position(self, audiobook):$/;"	m	class:AudioBookManager
-set_audiobook_path	.\audiobookapp.py	/^    def set_audiobook_path(self):$/;"	m	class:AudioBookApp
-set_config_path	.\audiobookapp.py	/^    def set_config_path(self):$/;"	m	class:AudioBookApp
-startup_animation	.\main.py	/^from startup_animation import startup_animation$/;"	i
-startup_animation	.\startup_animation.py	/^def startup_animation():$/;"	f
-subprocess	.\audiobook.py	/^import subprocess$/;"	i
-subprocess	.\audiobook_manager.py	/^import subprocess$/;"	i
-subprocess	.\audiobookmanager.py	/^import subprocess$/;"	i
-sys	.\audiobook.py	/^import sys$/;"	i
-sys	.\audiobookapp.py	/^import sys$/;"	i
-sys	.\startup_animation.py	/^import sys$/;"	i
-termios	.\audiobook.py	/^    import termios$/;"	i
-time	.\audiobook.py	/^import time$/;"	i
-time	.\startup_animation.py	/^import time$/;"	i
-tty	.\audiobook.py	/^    import tty$/;"	i
-update_position	.\audiobook.py	/^    def update_position(self, position):$/;"	m	class:AudioBook
+AudioBook	audiobook.py	/^class AudioBook:$/;"	c
+AudioBook	audiobook_manager.py	/^from audiobook import AudioBook$/;"	i
+AudioBook	audiobookmanager.py	/^from audiobook import AudioBook$/;"	i
+AudioBookApp	audiobookapp.py	/^class AudioBookApp:$/;"	c
+AudioBookApp	main.py	/^from audiobookapp import AudioBookApp$/;"	i
+AudioBookManager	audiobook_manager.py	/^class AudioBookManager:$/;"	c
+AudioBookManager	audiobookapp.py	/^from audiobookmanager import AudioBookManager$/;"	i
+AudioBookManager	audiobookmanager.py	/^class AudioBookManager:$/;"	c
+__init__	audiobook.py	/^    def __init__(self, title, file_path):$/;"	m	class:AudioBook
+__init__	audiobook_manager.py	/^    def __init__(self, audiobook_folder):$/;"	m	class:AudioBookManager
+__init__	audiobookapp.py	/^    def __init__(self):$/;"	m	class:AudioBookApp
+__init__	audiobookmanager.py	/^    def __init__(self, audiobook_folder):$/;"	m	class:AudioBookManager
+animate_text	startup_animation.py	/^def animate_text(text):$/;"	f
+app	main.py	/^    app = AudioBookApp()$/;"	v
+clear_screen	startup_animation.py	/^def clear_screen():$/;"	f
+create_log_file	audiobookmanager.py	/^    def create_log_file(self):$/;"	m	class:AudioBookManager
+display_play_bar	audiobook.py	/^    def display_play_bar(self, current_time, duration, show_instructions=False):$/;"	m	class:AudioBook
+download_audiobook	audiobook_manager.py	/^    def download_audiobook(self, audiobook_path):$/;"	m	class:AudioBookManager
+get_duration	audiobook.py	/^    def get_duration(self):$/;"	m	class:AudioBook
+get_keypress	audiobook.py	/^    def get_keypress(self):$/;"	m	class:AudioBook
+get_last_played_position	audiobookmanager.py	/^    def get_last_played_position(self, audiobook_title):$/;"	m	class:AudioBookManager
+json	audiobookmanager.py	/^import json$/;"	i
+list_audiobooks	audiobook_manager.py	/^    def list_audiobooks(self):$/;"	m	class:AudioBookManager
+list_audiobooks	audiobookmanager.py	/^    def list_audiobooks(self):$/;"	m	class:AudioBookManager
+load_config	audiobookapp.py	/^    def load_config(self):$/;"	m	class:AudioBookApp
+msvcrt	audiobook.py	/^    import msvcrt$/;"	i
+os	audiobook.py	/^import os$/;"	i
+os	audiobook_manager.py	/^import os$/;"	i
+os	audiobookapp.py	/^import os$/;"	i
+os	audiobookmanager.py	/^import os$/;"	i
+os	startup_animation.py	/^import os$/;"	i
+play	audiobook.py	/^    def play(self, start_time=None):$/;"	m	class:AudioBook
+play_audiobook	audiobook_manager.py	/^    def play_audiobook(self):$/;"	m	class:AudioBookManager
+play_audiobook	audiobookmanager.py	/^    def play_audiobook(self):$/;"	m	class:AudioBookManager
+play_with_progress	audiobook.py	/^    def play_with_progress(self, start_time=None):$/;"	m	class:AudioBook
+run	audiobookapp.py	/^    def run(self):$/;"	m	class:AudioBookApp
+save_config	audiobookapp.py	/^    def save_config(self):$/;"	m	class:AudioBookApp
+save_last_played_position	audiobookmanager.py	/^    def save_last_played_position(self, audiobook):$/;"	m	class:AudioBookManager
+set_audiobook_path	audiobookapp.py	/^    def set_audiobook_path(self):$/;"	m	class:AudioBookApp
+set_config_path	audiobookapp.py	/^    def set_config_path(self):$/;"	m	class:AudioBookApp
+startup_animation	main.py	/^from startup_animation import startup_animation$/;"	i
+startup_animation	startup_animation.py	/^def startup_animation():$/;"	f
+subprocess	audiobook.py	/^import subprocess$/;"	i
+subprocess	audiobook_manager.py	/^import subprocess$/;"	i
+subprocess	audiobookmanager.py	/^import subprocess$/;"	i
+sys	audiobook.py	/^import sys$/;"	i
+sys	audiobookapp.py	/^import sys$/;"	i
+sys	startup_animation.py	/^import sys$/;"	i
+termios	audiobook.py	/^    import termios$/;"	i
+time	audiobook.py	/^import time$/;"	i
+time	startup_animation.py	/^import time$/;"	i
+tty	audiobook.py	/^    import tty$/;"	i
+update_position	audiobook.py	/^    def update_position(self, position):$/;"	m	class:AudioBook

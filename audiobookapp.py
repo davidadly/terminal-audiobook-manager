@@ -6,7 +6,7 @@ class AudioBookApp:
     def __init__(self):
         self.script_path = os.path.dirname(os.path.abspath(__file__))
         self.config_file = os.path.join(self.script_path, "config.txt")
-        self.audiobook_path = os.path.join(self.script_path, "audio books")
+        self.audiobook_path = os.path.join(self.script_path, "audiobooks")
         os.makedirs(self.audiobook_path, exist_ok=True)
         self.load_config()
 
@@ -58,7 +58,7 @@ class AudioBookApp:
                     for audiobook in audiobooks:
                         print(audiobook.title)
                 elif choice == "2":
-                    self.manager.download_audiobook(self.audiobook_path)
+                    self.manager.download_audiobook()  # Remove the argument here
                 elif choice == "3":
                     self.manager.play_audiobook()
                 elif choice == "4":

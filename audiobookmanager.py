@@ -27,6 +27,14 @@ class AudioBookManager:
                 audiobooks.append(audiobook)
         return audiobooks
 
+    def download_audiobook(self):
+        youtube_url = input("Enter the YouTube URL of the audio book: ")
+        try:
+            subprocess.run(["yt-dlp", "-x", "--audio-format", "mp3", "-o", f"{self.audiobook_folder}/%(title)s.%(ext)s", youtube_url], check=True)
+            print("Audio book downloaded successfully.")
+        except subprocess.CalledProcessError as e:
+            print(f"Error downloading audio book: {str(e)}")
+
     def get_last_played_position(self, audiobook_title):
         try:
             with open(self.log_file, "r") as file:
